@@ -43,4 +43,24 @@ namespace SeleniumGridTest
 
     }
 
+    [TestFixture]
+    [Parallelizable]
+    public class IETesting : Hooks
+    {
+        public IETesting() : base(BrowserType.IE)
+        {
+        }
+
+        [Test]
+        public void IEGoogleTest()
+        {
+            Driver.Navigate().GoToUrl("http://www.google.com");
+            Driver.FindElement(By.Name("q")).SendKeys("Kubernetes" + Keys.Enter);
+            Assert.That(Driver.PageSource.Contains("Kubernetes"), Is.EqualTo(true),
+                                                     "The Test Kubernetes Does Not Exist");
+
+        }
+
+    }
+
 }

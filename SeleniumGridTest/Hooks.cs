@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using System;
 
@@ -34,6 +35,8 @@ namespace SeleniumGridTest
             //    Driver = new ChromeDriver();
             //else if (browserType == BrowserType.Firefox)
             //    Driver = new FirefoxDriver();
+            //else if (browserType == BrowserType.IE)
+            //    Driver = new InternetExplorerDriver();
             #endregion
 
             #region remote control
