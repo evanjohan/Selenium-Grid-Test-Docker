@@ -7,9 +7,9 @@ Selenium Grid:
 # Syntax:
 	- Running Selenium hub: 
 	  docker run -d --name selenium-hub selenium/hub
-	- Stop selenium-hub:
+	- Stop container selenium-hub:
 	  docker stop <id docker> / <name docker>
-	- Remove selenium-hub:
+	- Remove container selenium-hub:
 	  docker rm <id docker> /<name docker>
 	- Expose Selenium hub:
 	  docker run -d -p 4446:4444 --name selenium-hub -P selenium/hub
@@ -18,8 +18,12 @@ Selenium Grid:
 	  docker run -d -p 4576:5900 -P --name selenium-node-firefox --link selenium-hub:hub selenium/node-firefox-debug
 	- Register:
 	  docker logs selenium-hub
-	- running docker:
+	- running container docker:
 	  docker container start selenium-hub selenium-node-chrome  selenium-node-firefox
+	- stop container docker:
+	  docker container stop selenium-hub selenium-node-chrome  selenium-node-firefox
+	- remove container docker:
+	  docker container rm selenium-hub selenium-node-chrome  selenium-node-firefox
 	
 - password vnc: secret	  
 	
